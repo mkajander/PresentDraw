@@ -23,6 +23,16 @@ python present_draw.py Mikael Toni Jens
 ```
 
 
+## Docker version
+https://hub.docker.com/repository/docker/mibkr/present-draw
+```bash
+ docker run -it mibkr/present-draw
+```
+Or alternatively
+```bash
+ docker run -it mibkr/present-draw Mikael Toni Jens
+```
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

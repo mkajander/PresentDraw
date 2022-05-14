@@ -10,6 +10,20 @@ def draw_pair(givers, receivers):
         receiver = random.choice(receivers)
         while receiver == giver:
             receiver = random.choice(receivers)
+
+        # Check that givers without giver and receivers without receiver are not the same.
+        if len(givers) == 2:
+            # check that the givers list after removing the giver is different from the receivers list after removing
+            # the receiver.
+            last_two_givers = givers[:]
+            last_two_receivers = receivers[:]
+            last_two_givers.remove(giver)
+            last_two_receivers.remove(receiver)
+
+            if last_two_givers == last_two_receivers:
+                # select a new receiver where receiver is not the same as now
+                receiver = random.choice(last_two_receivers)
+
         # Remove the giver and receiver from the list.
         givers.remove(giver)
         receivers.remove(receiver)
